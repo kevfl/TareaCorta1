@@ -1,9 +1,6 @@
 
 #include "numberManager.h"
 
-
-
-
 using namespace numberManager;
 using namespace std;
 
@@ -16,7 +13,6 @@ bool isPrime(int n){
 				resp = true;
 				break;
 			}
-			
 		}
 	}
 	else{
@@ -28,7 +24,6 @@ bool isPrime(int n){
 }
 
 vector<int> product(vector<int>& vec, int multi, int tam){
-    
     vector<int> resp;
     int i = 0;
 	while(i < tam){
@@ -38,7 +33,7 @@ vector<int> product(vector<int>& vec, int multi, int tam){
 }
 
 
-int sumProduct(vector<int>& vec){
+int sumVector(vector<int>& vec, int tam){
 	int resp = 0;
 	int i = 0;
 	while(i < tam){
@@ -47,4 +42,33 @@ int sumProduct(vector<int>& vec){
 	return resp;
 }
 
+int sumVectorProduct(vector<int>& vec, int multi, int tam, int m){
+	vector<int> newVec = product(vec, multi, tam);
+	int resp = sumVector(newVec, m)
+	return resp;
+}
 
+	
+
+int columnPrimeNumber(vector<int>& vec, int tam){
+	int resp = 0;
+    int i = 0;
+	while(i < tam){
+		if(isPrime( vec[i] )){
+			resp = resp + 1;
+		}
+		i++;
+	}
+	return resp;
+}
+
+
+vector<int> getColumn(int min,int max, int tam){
+    vector<int> resp;
+    int i = 0;
+	srand(time(NULL));
+	while(i < tam){
+		resp.push_back(1 + rand() % (max - min));
+	}
+    return resp;
+}
