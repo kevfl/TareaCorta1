@@ -3,9 +3,10 @@
 #include<math.h>
 
 
+using namespace numberManager;
 using namespace std;
 
-public bool isPrime(int n){
+bool isPrime(int n){
 	bool resp = false;
 	if(n>2){
 		int tam = static_cast<int>(floor(sqrt(n))+1);
@@ -30,7 +31,7 @@ public bool isPrime(int n){
 	return resp;
 }
 
-public int[] product(int vec[], int multi, int tam){
+int[] product(int vec[], int multi, int tam){
 	int resp[];
 	int i = 0;
 	while(i<tam){
