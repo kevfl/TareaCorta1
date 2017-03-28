@@ -2,6 +2,7 @@
 #define numberManager_h
 
 #include<math.h>
+#include<vector>
 
 namespace numberManager
 {
@@ -9,7 +10,8 @@ namespace numberManager
 	{
 		public:
 			bool isPrime(int n);
-			int[] product(int vec[], int multi, int tam);
+			vector<int> product(vector<int>& vec, int multi, int tam);
+			int sumProduct(vector<int>& vec);
 	}
 }
 
